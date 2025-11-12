@@ -1,0 +1,124 @@
+/* 🌌 Futuristic UI with Subtle Patterns */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    background: #0f0f0f; /* Dark Theme */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Subtle Background Pattern */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+/* 🎛️ Modern Glassmorphism Box */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 18px;
+    width: 400px;
+    height: 250px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+/* ✅ Green Glow when Server Starts */
+.container.running {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);
+    border: 1px solid rgba(0, 255, 0, 0.6);
+}
+
+/* ❌ Red Glow when Server Stops/Error */
+.container.error {
+    box-shadow: 0 0 20px rgba(255, 87, 51, 0.8);
+    border: 1px solid rgba(255, 87, 51, 0.7);
+}
+
+/* Subtle Floating Effect */
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ⚡ Start Server Button */
+button {
+    background: linear-gradient(135deg, #4e4e4e, #707070);
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+/* 🔥 More Vibrant Start Server Button */
+#startBtn {
+    background: linear-gradient(135deg, #007bff, #0099ff);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+/* Subtle Glow Effect on Hover */
+button:hover {
+    background: linear-gradient(135deg, #666, #888);
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(150, 150, 150, 0.3);
+}
+
+/* 🟢 Server Running Status */
+.status.running {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0px 0px 12px rgba(0, 255, 0, 1);
+}
+
+/* 🟡 Server Not Running */
+.status.not-running {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-shadow: 0px 0px 10px rgba(255, 204, 0, 0.8);
+}
+
+/* 🔴 Server Stopped or Error */
+.status.error {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5733;
+    text-shadow: 0px 0px 12px rgba(255, 87, 51, 0.9);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 450px) {
+    .container {
+        width: 90%;
+        padding: 25px;
+        height: auto;
+    }
+}

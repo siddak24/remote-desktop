@@ -1,0 +1,38 @@
+# Java
+*.class
+/bin/
+/bin/**
+/target/
+/out/
+/build/
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Gradle
+.gradle/
+build/
+
+# Node
+node_modules/
+npm-debug.log
+package-lock.json
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
+
+# OneDrive temp
+~$*

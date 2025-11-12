@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.remotedesktop'
+version = '1.0.0'
+
+// Java 21 LTS Configuration
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // No external dependencies required for basic Swing/AWT/Socket usage
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+    options.release = 21
+}
+
+application {
+    mainClass = 'Server'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'Server'
+    }
+}
+
+// Java 21 Features Support
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs << '--enable-preview'
+}
